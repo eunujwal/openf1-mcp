@@ -153,10 +153,11 @@ class OpenF1HTTPServer {
 
   public async start(): Promise<void> {
     const port = process.env.PORT || 3000;
+    const host = process.env.HOST || '0.0.0.0';
     
     return new Promise((resolve) => {
-      this.app.listen(port, () => {
-        console.log(`OpenF1 MCP HTTP Server running on port ${port}`);
+      this.app.listen(port, host, () => {
+        console.log(`OpenF1 MCP HTTP Server running on http://${host}:${port}`);
         console.log(`MCP SSE endpoint: /sse`);
         console.log(`Health check: /health`);
         resolve();
