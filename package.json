@@ -5,7 +5,8 @@
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-      "build": "tsc",
+      "build": "tsc && npm run copy-build",
+      "copy-build": "cp -r build openf1_mcp/",
       "start": "node build/http-server.js",
       "start:local": "node build/index.js",
       "start:http": "node build/http-server.js",

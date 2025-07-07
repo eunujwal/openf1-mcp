@@ -1,0 +1,5 @@
+# Python dependencies for openf1-mcp
+# Note: This package also requires Node.js 18+ to be installed separately
+
+# No additional Python dependencies required for the wrapper
+# The package uses subprocess to run the compiled TypeScript code 

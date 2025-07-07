@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include package.json
+include tsconfig.json
+recursive-include openf1_mcp/build *
+recursive-include src *.ts 
