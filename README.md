@@ -1,6 +1,6 @@
 # OpenF1 MCP
 
-Model Context Protocol server for OpenF1 Formula 1 API
+Model Context Protocol server for OpenF1 Formula 1 API, you can check the API specs here: https://openf1.org/
 
 This package provides a Python wrapper around a TypeScript-based MCP server for accessing Formula 1 data through the OpenF1 API.
 
@@ -107,7 +107,3 @@ MIT License - see LICENSE file for details.
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
-
-## Support
-
-For issues and questions, please use the GitHub issue tracker. 
