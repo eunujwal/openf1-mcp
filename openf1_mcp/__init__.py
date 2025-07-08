@@ -9,7 +9,6 @@ __version__ = "0.1.0"
 __author__ = "Your Name"
 __email__ = "your.email@example.com"
 
-from .cli import main
-from .server import OpenF1MCPServer
+from .interface import main, OpenF1MCPServer
 
 __all__ = ["main", "OpenF1MCPServer"] 
