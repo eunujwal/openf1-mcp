@@ -20,7 +20,7 @@ pip install openf1-mcp
 ### Install from source
 
 ```bash
-git clone https://github.com/yourusername/openf1-mcp.git
+git clone https://github.com/eunujwal/openf1-mcp.git
 cd openf1-mcp
 npm install
 npm run build
