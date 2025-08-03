@@ -10,7 +10,8 @@
       "start": "node build/server.js",
       "start:http": "node build/server.js --http",
       "dev": "tsc --watch",
-      "prepare": "npm run build"
+      "prepare": "npm run build",
+      "vercel-build": "tsc"
   },
   "bin": {
     "openf1-mcp": "build/server.js"
@@ -35,6 +36,9 @@
     "@types/express": "^5.0.3",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "files": [
     "build/**/*"

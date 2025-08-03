@@ -29,7 +29,32 @@ pip install -e .
 
 ## Usage
 
-### Command Line Interface
+### Option 1: Remote Server (Recommended)
+
+Use the pre-deployed remote MCP server (no installation required):
+
+**MCP Endpoint**: `https://openf1-mcp.onrender.com/sse`
+
+Configure in Claude Desktop:
+```json
+{
+  "mcpServers": {
+    "openf1": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/create-mcp", "client", "https://openf1-mcp.onrender.com/sse"]
+    }
+  }
+}
+```
+
+Or use with MCP Inspector:
+```bash
+npx @modelcontextprotocol/inspector https://openf1-mcp.onrender.com/sse
+```
+
+### Option 2: Local Installation
+
+#### Command Line Interface
 
 Run the MCP server in stdio mode (default):
 ```bash
@@ -74,6 +99,24 @@ The MCP server provides the following tools for accessing Formula 1 data:
 - `openf1_stints` - Get stint data
 - `openf1_team_radio` - Get team radio messages
 - `openf1_weather` - Get weather data
+
+## Deployment
+
+The server includes configuration files for easy deployment to various platforms:
+
+### Render (Current deployment)
+- Uses `render.yaml` configuration
+- Automatically deploys from GitHub
+- Available at: https://openf1-mcp.onrender.com
+
+### Railway
+- Uses `railway.toml` configuration
+- Run: `railway up`
+
+### Docker
+- Uses included `Dockerfile`
+- Build: `docker build -t openf1-mcp .`
+- Run: `docker run -p 3000:3000 openf1-mcp`
 
 ## Development
 
